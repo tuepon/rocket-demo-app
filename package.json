@@ -1,10 +1,13 @@
 {
-  "name": "rusty-react",
+  "name": "rocket-demo-app",
   "version": "1.0.0",
-  "description": "A skeleton app showing how to use Rust to leverage Wasm in your React app.",
+  "description": "",
   "main": "src/index.jsx",
   "scripts": {
-    "dev": "webpack server"
+    "dev": "webpack server",
+    "build:wasm": "cargo build --target wasm32-unknown-unknown",
+    "build:bindgen": "wasm-bindgen target/wasm32-unknown-unknown/debug/rocket-demo-app.wasm --out-dir build",
+    "build": "npm run build:wasm && npm run build:bindgen && npx webpack"
   },
   "keywords": [],
   "author": "Josh Finnie <josh@jfin.us",
@@ -16,6 +19,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
+    "@wasm-tool/wasm-pack-plugin": "^1.6.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.2.3",
     "html-webpack-plugin": "^5.5.0",
