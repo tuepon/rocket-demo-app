@@ -7,5 +7,5 @@ extern "C" {
 
 #[wasm_bindgen]
 pub fn big_computation() {
-    alert("My birthday is 02/09/1965");
+    alert("My birthday is 02091965");
 }
