@@ -9,6 +9,7 @@
     "build:bindgen": "wasm-bindgen target/wasm32-unknown-unknown/debug/rocket-demo-app.wasm --out-dir build",
     "build": "npm run build:wasm && npm run build:bindgen && npx webpack"
   },
+  "heroku-run-build-script": true,
   "keywords": [],
   "author": "Josh Finnie",
   "license": "MIT",
