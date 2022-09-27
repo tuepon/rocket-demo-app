@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-const wasm = import("../pkg/rocket_demo_app_bg");
+const wasm = import("./target/release/rocket-demo-app");
 
 wasm.then(m => {
   const App = () => {
