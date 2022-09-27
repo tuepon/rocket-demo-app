@@ -1,1 +1,1 @@
-web: ROCKET_PORT=$PORT ROCKET_KEEP_ALIVE=0 ./target/release/rocket-demo-app
+web: ROCKET_PORT=$PORT ROCKET_KEEP_ALIVE=0 ./pkg/rocket_demo_app_bg
