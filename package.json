@@ -5,6 +5,7 @@
   "main": "src/index.jsx",
   "scripts": {
     "dev": "webpack server",
+    "start": "npm run dev",
     "build:wasm": "cargo build --target wasm32-unknown-unknown",
     "build:bindgen": "wasm-bindgen target/wasm32-unknown-unknown/debug/rocket-demo-app.wasm --out-dir build",
     "build": "npm run build:wasm && npm run build:bindgen && npx webpack"
