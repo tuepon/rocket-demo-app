@@ -12,11 +12,6 @@ fn index() -> io::Result<NamedFile> {
     NamedFile::open("src/index.jsx")
 }
 
-#[get("/<file..>")]
-fn files(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(Path::new("static/").join(file)).ok()
-}
-
 // #[get("/")]
 // fn index() -> &'static str {
 //     "This is my first Rocket Demo app"
@@ -28,5 +23,5 @@ fn files(file: PathBuf) -> Option<NamedFile> {
 // }
 
 fn main() {
-    rocket::ignite().mount("/", routes![index, files]).launch();
+    rocket::ignite().mount("/", routes![index]).launch();
 }
